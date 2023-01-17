@@ -19,7 +19,7 @@ The .pka file is opened to exmaine the topology. Switch 1 is opened, and the CLI
 <img src="https://imagizer.imageshack.com/img922/9844/gUnWiX.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
-The Enable command is entere to grant elevated privileges. Then, configure terminal mode is entered. Two users are then created under the interface: <br/>
+The Enable command is entered to grant elevated privileges. Then, configure terminal mode is entered. Two users are then created under the interface: <br/>
 <img src="https://imagizer.imageshack.com/img924/9084/uyh3Js.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
@@ -27,7 +27,7 @@ The console is secured by enabling local password checking: <br/>
 <img src="https://imagizer.imageshack.com/img924/3254/2awk4T.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
-The enable password is changed top c!sc0: <br/>
+The enable password is changed to c!sc0: <br/>
 <img src="https://imagizer.imageshack.com/img922/6033/EzJxHZ.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
@@ -61,8 +61,36 @@ The config file is verified on the TFTP server under the Services tab: <br/>
 <br />
 
 <h2>Back Up and Upgrade the Device ISO:</h2>
-: <br/>
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+Show version command is executed to display version information. To display the contents of the flash memory the command Show flash is used: <br/>
+<img src="https://imagizer.imageshack.com/img923/5991/ZKpGn3.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+Copy flash tftp command is used to back up the image file on the TFTP server. The backup is named "S1-OSimage-backup": <br/>
+<img src="https://imagizer.imageshack.com/img924/4496/KUV6D6.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+The backup is verified within the TFTP server: <br/>
+<img src="https://imagizer.imageshack.com/img922/4186/liCuMU.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+The image is then copied via copy tftp flash : <br/>
+<img src="https://imagizer.imageshack.com/img923/6968/2dOrlp.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+The new IOS image is verified by using the show flash command: <br/>
+<img src="https://imagizer.imageshack.com/img923/5923/8zOVL8.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+Global configuration mode is entered and the image is loaded using the boot system flash command: <br/>
+<img src="https://imagizer.imageshack.com/img922/2643/Gyqh81.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+The switch is then reloaded: <br/>
+<img src="https://imagizer.imageshack.com/img924/464/0VtqIj.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+Using the show version command again proves that the version has been updated to 15.0(2)SE4: <br/>
+<img src="https://imagizer.imageshack.com/img923/6986/caJKYD.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
 
